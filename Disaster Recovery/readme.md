@@ -97,10 +97,12 @@ This can be turned into a strong production-grade AWS Disaster Recovery project.
 | **Monitoring**              | CloudWatch Metrics, Alarms & Logs                         |
 | **Automation**              | AWS Lambda                                                |
 
-**What this means**
+### What this means
 
 RPO (Recovery Point Objective) ≤ 15 minutes
-→ In a disaster, you aim to lose no more than 15 minutes of data.
+
+- In a disaster, you aim to lose no more than 15 minutes of data.
 
 RTO (Recovery Time Objective) ≤ 30–60 minutes
-→ The application should be restored and accessible within 30–60 minutes after a major failure.
+
+- The application should be restored and accessible within 30–60 minutes after a major failure.
