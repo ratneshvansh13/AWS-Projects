@@ -1,0 +1,10 @@
+variable "name" { type = string }
+variable "vpc_id" { type = string }
+variable "private_subnets" { type = list(string) }
+variable "instance_type" { type = string }
+variable "target_group_arn" { type = string }
+variable "security_group_id" { type = string }
+variable "min_size" { type = number }
+variable "desired_capacity" { type = number }
+variable "max_size" { type = number }
+variable "app_port" { type = number }

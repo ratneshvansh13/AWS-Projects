@@ -1,0 +1,11 @@
+variable "name" { type = string }
+variable "vpc_id" { type = string }
+variable "private_subnets" { type = list(string) }
+variable "security_group_id" { type = string }
+variable "db_name" { type = string }
+variable "db_username" { type = string }
+variable "db_password" { type = string }
+variable "instance_class" { type = string }
+variable "engine_version" { type = string }
+variable "allocated_storage" { type = number }
+variable "backup_retention" { type = number }
