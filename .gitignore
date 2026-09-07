@@ -10,6 +10,5 @@ crash.log.*
 *.tfplan.json
 
 # Variable files containing secrets
-
-
-#
+aws-disaster-recovery.tar.tz
+aws-disaster-recovery.zip
