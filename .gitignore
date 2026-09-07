@@ -1,0 +1,15 @@
+#Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.log.*
+
+#Terraform plan files
+*.tfplan
+*.tfplan.json
+
+# Variable files containing secrets
+
+
+#

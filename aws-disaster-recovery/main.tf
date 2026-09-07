@@ -126,7 +126,7 @@ module "primary_rds" {
 
 module "dr_rds" {
   source = "./modules/rds_replica"
-
+  # frontend ----- 
   providers = {
     aws = aws.dr
   }
@@ -195,7 +195,14 @@ module "dr_lambda" {
     aws = aws.lambda_dr
   }
 
-  dr_asg_name = module.dr_compute.asg_name
+  dr_asg_name             = module.dr_compute.asg_name
+  primary_alb_dns_name    = module.primary_alb.alb_dns_name
+  dr_alb_dns_name         = module.dr_alb.alb_dns_name
+  dr_rds_instance_id      = var.enable_rds_dr ? module.dr_rds[0].db_instance_identifier : ""
+  route53_zone_id         = var.route53_zone_id
+  domain_name             = var.domain_name
+  dr_s3_bucket            = module.s3.dr_bucket_id
+  primary_health_check_id = var.enable_route53 ? module.route53[0].primary_health_check_id : ""
 }
 
 resource "aws_kms_key" "dr_rds" {
