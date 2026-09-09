@@ -13,4 +13,7 @@ crash.log.*
 
 # compressed files .zip & tar.gz
 aws-disaster-recovery.tar.tz
-aws-disaster-recovery.zip
+aws-disaster-recovery.zipaws-disaster-recovery.tar.tz
+*.tar.tz
+*.tar.gz
+*.zip
