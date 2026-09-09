@@ -21,10 +21,6 @@ resource "aws_launch_template" "this" {
     #!/bin/bash
     set -eux
     dnf install -y nginx
-
-    # Configure Nginx to listen on the specified app port
-    sed -i 's/listen       80 default_server;/listen       ${var.app_port} default_server;/g' /etc/nginx/nginx.conf
-
     cat > /usr/share/nginx/html/index.html <<HTML
     <html>
       <body>
