@@ -201,7 +201,7 @@ module "dr_lambda" {
   dr_rds_instance_id      = var.enable_rds_dr ? module.dr_rds[0].db_instance_identifier : ""
   route53_zone_id         = var.route53_zone_id
   domain_name             = var.domain_name
-  dr_s3_bucket            = module.s3.dr_bucket_id
+  dr_s3_bucket            = module.s3.dr_bucket_name
   primary_health_check_id = var.enable_route53 ? module.route53[0].primary_health_check_id : ""
 }
 

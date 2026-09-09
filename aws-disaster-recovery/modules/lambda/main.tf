@@ -118,11 +118,11 @@ resource "aws_lambda_function" "recovery" {
 
   environment {
     variables = {
-      DR_ASG_NAME         = var.dr_asg_name
-      DR_RDS_INSTANCE_ID  = var.dr_rds_instance_id
-      ROUTE53_ZONE_ID     = var.route53_zone_id
-      DOMAIN_NAME         = var.domain_name
-      DR_ALB_DNS_NAME     = var.dr_alb_dns_name
+      DR_ASG_NAME          = var.dr_asg_name
+      DR_RDS_INSTANCE_ID   = var.dr_rds_instance_id
+      ROUTE53_ZONE_ID      = var.route53_zone_id
+      DOMAIN_NAME          = var.domain_name
+      DR_ALB_DNS_NAME      = var.dr_alb_dns_name
       PRIMARY_ALB_DNS_NAME = var.primary_alb_dns_name
     }
   }
@@ -139,12 +139,12 @@ resource "aws_lambda_function" "api" {
 
   environment {
     variables = {
-      RECOVERY_LAMBDA_NAME     = aws_lambda_function.recovery.function_name
-      PRIMARY_ALB_DNS_NAME     = var.primary_alb_dns_name
-      DR_ALB_DNS_NAME          = var.dr_alb_dns_name
-      DR_RDS_INSTANCE_ID       = var.dr_rds_instance_id
-      DR_S3_BUCKET             = var.dr_s3_bucket
-      PRIMARY_HEALTH_CHECK_ID  = var.primary_health_check_id
+      RECOVERY_LAMBDA_NAME    = aws_lambda_function.recovery.function_name
+      PRIMARY_ALB_DNS_NAME    = var.primary_alb_dns_name
+      DR_ALB_DNS_NAME         = var.dr_alb_dns_name
+      DR_RDS_INSTANCE_ID      = var.dr_rds_instance_id
+      DR_S3_BUCKET            = var.dr_s3_bucket
+      PRIMARY_HEALTH_CHECK_ID = var.primary_health_check_id
     }
   }
 }
