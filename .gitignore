@@ -10,5 +10,7 @@ crash.log.*
 *.tfplan.json
 
 # Variable files containing secrets
+
+# compressed files .zip & tar.gz
 aws-disaster-recovery.tar.tz
 aws-disaster-recovery.zip
